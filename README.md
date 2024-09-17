@@ -1,2 +1,2 @@
-# js-b2e
-Javascript revisit from basics to advance repository under guidance of Chai aur Code
+# Javascript Basic to Expert
+Javascript revisit from basics to expert repository under guidance of Chai aur Code
