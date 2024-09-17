@@ -1,0 +1,37 @@
+JavaScript Data Type Conversion Table
+
+In JavaScript, data types can be converted explicitly or implicitly between different types. Here's a table showing the common conversions between basic data types in JavaScript.
+
+| From / To       | **String**                    | **Number**                   | **Boolean**                  | **Object**                        | **Undefined**                  | **Null**                      |
+|-----------------|-------------------------------|------------------------------|------------------------------|-----------------------------------|--------------------------------|-------------------------------|
+| **String**      | -                             | `"123" → 123`                | `"" → false`, `"abc" → true` | `"abc" → new String("abc")`       | `"abc" → NaN`                  | `"abc" → null`                |
+| **Number**      | `123 → "123"`                 | -                            | `0 → false`, `1 → true`      | `123 → new Number(123)`           | `NaN → false`                  | `0 → false`                   |
+| **Boolean**     | `true → "true"`               | `true → 1`, `false → 0`      | -                            | `true → new Boolean(true)`        | `false → 0`                    | `false → 0`                   |
+| **Object**      | `new String("abc") → "abc"`   | `new Number(123) → 123`      | `new Boolean(true) → true`   | -                                 | Throws error                   | Throws error                  |
+| **Undefined**   | `undefined → "undefined"`     | `undefined → NaN`            | `undefined → false`          | `undefined → undefined`           | -                              | `undefined`                   |
+| **Null**        | `null → "null"`               | `null → 0`                   | `null → false`               | `null → null`                     | `null → 0`                     | -                             |
+
+Outline:
+
+- **String**: Conversion to/from string values.
+- **Number**: Conversion to/from numeric values.
+- **Boolean**: Conversion to/from boolean values.
+- **Object**: Conversion involving object creation.
+- **Undefined**: Behavior and conversions involving undefined.
+- **Null**: Behavior and conversions involving null.
+
+Implicit Conversion (Type Coercion):
+JavaScript performs type coercion automatically in some cases:
+
+- **String + Number**: Concatenates (e.g., `"5" + 1 = "51"`)
+- **Number + Boolean**: Converts Boolean to Number (e.g., `true + 1 = 2`)
+- **String + Boolean**: Concatenates (e.g., `"true" + true = "truetrue"`)
+- **Equality (`==`)**: Performs type coercion before comparison (e.g., `5 == "5"` is `true`)
+
+Explicit Conversion Functions:
+JavaScript provides explicit conversion functions:
+
+- **String()**: Converts to a string.
+- **Number()**: Converts to a number.
+- **Boolean()**: Converts to a boolean.
+- **parseInt()**, **parseFloat()**: Parse strings into integers or floating-point numbers.
