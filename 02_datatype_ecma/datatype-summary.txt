@@ -1,0 +1,15 @@
+Two types of Datatype in JS on the basis of data memory me kis trh store hotey h aur access krte h:
+
+1. Primitive: Call by value - which means the original data is not shared but copy is shared and changes done on that copy
+    a. String
+    b. Number
+    c. Boolean
+    d. Symbol
+    e. null
+    f. undefined
+    g. BigInt
+
+2. Non-Primitive(Reference Type)
+    a. Array
+    b. Objects
+    c. Functions

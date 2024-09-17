@@ -44,9 +44,32 @@ console.log("Null:", emptyValue); // Output: null
 // Symbol
 let sym = Symbol('id');
 console.log("Symbol:", sym); // Output: Symbol(id)
+let anotherSym = Symbol('id')
+console.log(sym == anotherSym)  // false because both are unique
+
 
 // BigInt
 let bigInt = 12345678901234567890n;
 console.log("BigInt:", bigInt); // Output: 12345678901234567890n
+console.log(typeof bigInt);
+
+
+/*
+Return type of variables in JavaScript
+1) Primitive Datatypes
+       Number => number
+       String  => string
+       Boolean  => boolean
+       null  => object
+       undefined  =>  undefined
+       Symbol  =>  symbol
+       BigInt  =>  bigint
+
+2) Non-primitive Datatypes
+       Arrays  =>  object
+       Function  =>  function
+       Object  =>  object
+*/
+
 
 
