@@ -1,0 +1,3 @@
+There are two memories:
+1. Stack Memory (Primitive) ~ Jab bhi stack memory use hoti h, we get copy of variable data
+2. Heap Memory  (Non-Primitive) ~ Jab bhi heap memory use hoti h, we get reference of variable data which is original
