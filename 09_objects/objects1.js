@@ -4,6 +4,9 @@
 
 // 2. Using Constructor         a.k.a. Singleton
 
+
+// In this, I'll learn about object literals
+
 let varName = "Hii"
 
 const jsUser = {
