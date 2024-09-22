@@ -9,7 +9,7 @@ console.log(calculateCartPrice(12, 14, 15, 64))
 function calculateCartPrices(val1, val2, ...prices){
     return prices
 }
-console.log(calculateCartPrices(12, 14, 15, 64))
+console.log(calculateCartPrices(12, 14, 15))
 
 // Passing the object as an param in the function
 
