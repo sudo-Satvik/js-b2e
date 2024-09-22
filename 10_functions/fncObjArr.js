@@ -25,7 +25,7 @@ function handleObjects(userObj) {
 
 handleObjects(user)                 // Instead we can also create the object as an argument!
 
-const arr = [200, 400, 500, 600]
+const arr = [200, 400, 500, 600, 700]
 
 function fncArr(getArr){
     return getArr[1]
