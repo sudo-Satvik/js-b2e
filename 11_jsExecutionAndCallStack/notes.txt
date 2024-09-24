@@ -1,22 +1,22 @@
-How code executes?
+How code executes in JavaScript?
+_____________________________________
 
-# Execution Context - How js run the programmes ?!
-
-
-* {} -> Global execution context which refers to 'this' ~ Browser me window object aajaati h
+|| # Execution Context - How js run the programmes ?!
 
 
-#js is a single threaded
+
+|| # JS is a single threaded
 
 
-* FUNCTIONAL/ION EXECUTION CONTEXT
-
+There are three types of contexts in the JavaScript: 
+* {} -> GLOBAL EXECUTION CONTEXT: which can be refers by using 'this' keyword ~ Browser me window object aajaati h
+* FUNCTION/AL EXECUTION CONTEXT
 * EVAL EXECUTION CONTEXT
 
 
 JS CODE RUNS IN TWO PHASES:
-   1. Memory (Creation Phase)
-   2. Execution Phasef
+   1. Memory Creation Phase or Creation Phase
+   2. Execution Phase
 
 
 Now consider the following code
