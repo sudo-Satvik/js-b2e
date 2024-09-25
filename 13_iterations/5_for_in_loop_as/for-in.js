@@ -1,3 +1,5 @@
+// Used to iterate over the properties (keys) of an object or the indices of an array.
+// works on both objects and strings because it iterates over the enumerable properties of an object and the indices of a string.
 const extensionName = {
     js: "JavaScript",
     cpp: "C++",

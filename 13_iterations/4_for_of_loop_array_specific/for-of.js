@@ -1,7 +1,7 @@
 // For of loop
 
-// ["", "", ""]
-// [{}, {}, {}]
+// Used to iterate over iterable objects like arrays, strings, or sets, returning the values of each item (e.g., elements in an array).
+// works on iterable objects like arrays, strings, and other iterable structures (e.g., sets and maps) because it directly returns the values of each element in the iterable.
 
 // for (const element of object) {              // object means kis chiz me lagana h loop
     // console.log(element)
