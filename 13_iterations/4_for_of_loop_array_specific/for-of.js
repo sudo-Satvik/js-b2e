@@ -10,13 +10,13 @@
 const arr = [1, 2, 3, 4, 5]
 
 for(const num of arr){
-    console.log(`Value: ${num}`);
+    // console.log(`Value: ${num}`);
 }
 
 const greeting = "Good Evening!"
 
 for(const greet of greeting){
-    console.log(`Each letter of greeting: ${greet}`);
+    // console.log(`Each letter of greeting: ${greet}`);
 }
 
 // const number = 12232424
@@ -29,4 +29,31 @@ for(const greet of greeting){
 // Maps: just like array but have some extra features
 
 const newMap = new Map()
-newMap.
+newMap.set('IN', "India")
+newMap.set('USA', "United States of America")
+newMap.set('FR', "France")
+
+// console.log(newMap);
+
+// Iterating Map
+
+// for (const key of newMap) {
+//     console.log(key);    
+// }
+
+// above will not work correctly so I will do this instead!
+
+// We'll use array de-structure
+
+for(const [key, value] of newMap){
+    // console.log(key + ":- " + value);
+}
+
+// const myObj = {
+//     'game1': "NFS",
+//     'game2': "GTA"
+// }
+
+// for(const [key, value] of myObj){
+//     console.log(key, ":- ", value);                  // Object is not iteratable
+// }
