@@ -1,5 +1,12 @@
 // Higher order function of array
 
+// Used to execute a provided function once for each element in an array.
+// forEach only works on arrays, not on strings or objects, because it is a method specifically designed for array-like structures in JavaScript.
+
+// Major problem solve easily is this
+// ["", "", ""]
+// [{}, {}, {}]
+
 const coding = ["js", "ruby", "cpp"]
 
 // Call back function : name of the function shouldn't be there
