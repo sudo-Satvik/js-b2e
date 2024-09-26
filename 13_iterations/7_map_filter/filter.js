@@ -31,6 +31,6 @@ const game = [
     {gameName: "Player Unknown Battleground", type: "Shooting and Action", price: 5},
 ]
 
-const userNeed = game.filter( (g) => g.price < 10)
+const userNeed = game.filter( (g) => g.price < 10 && g.type === "Racing")
 
 console.log(userNeed);
