@@ -4,11 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Intro</title>
+    <style>
+        code{
+            background-color: rgba(255, 0, 0, 0.116);
+            color: rgb(167, 4, 4);
+        }
+    </style>
 </head>
 <body>
     <div class="bg-aqua">
         <h1 class="heading">DOM Learning</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, ab officia nesciunt, aliquam dolor illo commodi architecto placeat ducimus dolores nam quo atque, voluptas pariatur dolore corrupti? Veritatis, laborum eveniet?</p>
+        
+        <p>Must try these in browser console:</p>
+        <ul>
+            <li><code>console.log(window)</code></li>
+            <li><code>console.log(document)</code></li>
+            <li><code>console.dir(document)</code></li>
+        </ul>
+
+        <p>Structure of DOM</p>
+        <pre>
+            Window
+              |
+              |
+              v
+           Document
+              |
+              |
+              v
+             HTML
+              |
+          ----------
+          |        |
+          v        v
+          head    body
+        /    \        \
+    title   meta      div node - attribute
+      |              /   |    \
+  text node         h1   p     ul - li
+                               | \
+                               li li
+        </pre>
     </div>
 </body>
 </html>
