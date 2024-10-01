@@ -5,10 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selecting Elements</title>
     <style>
-        
+        .aqua{
+            background-color: aqua;
+        }
     </style>
 </head>
 <body>
-    
+    <h1>Manipulating Elements</h1>
+    <h2>
+        Content Manipulation:
+    </h2>
+    <ul>
+        <li>element.innerHTML</li>
+        <li>element.textContent</li>
+    </ul>
+    <p>Sample</p>
+    <k>s</k>
+    <h2>
+        Attribute Manipulation:
+    </h2>
+    <ul>
+        <li>element.getAttribute(name)</li>
+        <li>element.setAttribute(name, value)</li>
+        <li>element.removeAttribute(name)</li>
+    </ul>
+    <span class="txt">The value of id attribute of article element is: </span>
+    <article class="hehe">Loli</article>
+    <span id="demo"></span>
+    <script>
+        // 1. element.innerHTML
+        const para = document.querySelector('p').innerHTML;
+        console.log(para);          // Sample
+        // 2. element.textContent
+        const para2 = document.querySelector('p').textContent;
+        console.log(para2);         // Sample
+
+        const paraChanging = document.querySelector('k').innerHTML = "<center>This will be changed and get aligned to center</center>";
+        
+        const paraChanging2 = document.querySelector('p').textContent = "This will be changed only";
+        
+        const element = document.querySelector('article');
+        let value = element.getAttribute('class');
+        let changeClass = element.setAttribute('class',  'aqua');
+        let removeAttribute = element.removeAttribute('class');
+        document.getElementById('demo').innerText = value;
+    </script>
 </body>
 </html>
