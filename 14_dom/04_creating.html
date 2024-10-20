@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Element Part 2</title>
+</head>
+<body style="background-color: #222; color: #fff">
+    
+
+    
+</body>
+<script>
+    const divCreator = document.createElement('div')
+    divCreator.className = "main";
+    divCreator.id = Math.round(Math.random() * 10 + 1);
+    divCreator.setAttribute('title', 'This is a generated title');
+    divCreator.style.color = 'red';
+    // divCreator.innerText = 'Hii' 
+    // or we can do that 
+    const addText = document.createTextNode("Satvik Sharma");
+    divCreator.appendChild(addText);
+    console.log(divCreator);
+
+    // Finally add in the body to display
+    document.body.appendChild(divCreator);
+</script>
+</html>
