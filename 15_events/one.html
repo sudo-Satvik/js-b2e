@@ -66,20 +66,41 @@
 
     // stopping the propagation
     document.getElementById('images').addEventListener('click', function(e){
-        console.log('clicked inside the ul')
+        // console.log('clicked inside the ul')
     }, false)
 
     document.getElementById('owl').addEventListener('click', function(e){
-        console.log('owl clicked')
-        e.stopPropagation()
+        // console.log('owl clicked')
+        // e.stopPropagation()
     }, false)
 
 
     // Prevent Default
     document.getElementById('google').addEventListener('click', function(e){
-        console.log('google')
+        // console.log('google')
         e.preventDefault()
+        // e.stopPropagation()
     }, false)
 
+
+    // Selecting multiple elements enclosed within a parent
+    document.querySelector('#images').addEventListener('click', function(e){
+        // console.log(e.target)
+        // console.log(e.target.parentNode)
+
+        // eg: removing the element
+        let removeIt = e.target.parentNode
+        // By using this
+        // removeIt.remove()
+        // or
+        // removeIt.parentNode.removeChild(removeIt);
+
+        // putting strict check if the parent node doesn't contain li and directly remove all the element in a click 
+        // console.log(e.target.tagName)
+        if (e.target.tagName === 'IMG' || e.target.tagName === 'A') {
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+    }, false)
 </script>
 </html>
