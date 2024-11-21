@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>htnml Events </title>
+    <title>Html Events </title>
 </head>
 <body style="background-color: #414141; color: aliceblue;">
     <h2>Amazing image</h2>
@@ -19,6 +19,67 @@
    </div>
 </body>
 <script>
+    // Events invoke on user interactions, not by sequentially js execution
+
+    // We can put events like this too but it doesn't provide the sufficient features as well as the PROPAGATION
+
+    // document.getElementById('prayer').onclick = () => alert('You clicked on prayer image')
+
+    // attachEvent():  it is used for Internet Explorer
+
+
+    // Here come protagonist
     
+    document.getElementById('owl').addEventListener('click', function(eventObject){
+        // alert('You clicked on owl image')
+        
+        // check for: type, timestamps, defaultPrevented(), target, toElement, srcElement, currentTarget
+        // Interview pov: clientX, clientY, screenX, screenY, offset
+        // altkey, ctrlkey, shitkey, keyCode(sabhi key k alag alag value hoti h)
+        // console.log(eventObject);
+
+        
+    }, false)
+    // false: it is the third param of addEventListener, which is not necessary to mention (if we mention false).
+    // it is basically the event propagation.
+
+    // Event Propagation: event bubbling and event capturing
+
+    // BUBBLING UP - BUBBLE NEECHE SE UPAR JAATA HAI ~ CHILD PHLE, PARENT BAAD ME
+    document.getElementById('images').addEventListener('click', function(e){
+        // console.log('clicked inside the ul')
+    }, false)
+
+    document.getElementById('owl').addEventListener('click', function(e){
+        // console.log('owl clicked')
+    }, false)
+
+    // EVENT CAPTURING - PARENT PHLE, CHILD BAAD ME
+    document.getElementById('images').addEventListener('click', function(e){
+        // console.log('clicked inside the ul')
+    }, true)
+
+    document.getElementById('owl').addEventListener('click', function(e){
+        // console.log('owl clicked')
+    }, true)
+
+
+    // stopping the propagation
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log('clicked inside the ul')
+    }, false)
+
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log('owl clicked')
+        e.stopPropagation()
+    }, false)
+
+
+    // Prevent Default
+    document.getElementById('google').addEventListener('click', function(e){
+        console.log('google')
+        e.preventDefault()
+    }, false)
+
 </script>
 </html>
