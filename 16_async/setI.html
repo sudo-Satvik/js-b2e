@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeOut and SetInterval </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h1>
+        Satvik Sharma
+    </h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function(), time)
+    // bs itne time baad krega (ek baar)
+    
+    setTimeout(function() {
+        console.log("after one second")
+    }, 1000);
+
+    const changeText = () => {
+        document.querySelector('h1').innerHTML = "Mayank Sharma"
+    }
+    
+    const changeMe = setTimeout(changeText, 2000)
+
+    // It will deny the setTimeout
+    clearTimeout(changeMe)
+
+    // setInterval
+    let intervalId; // Store the interval ID here for proper control
+
+    const interval = function(str) {
+        console.log(str, "I'll be appeared every 1 second!");
+    };
+
+    // Start the interval
+    document.getElementById("start").addEventListener('click', function() {
+        if (!intervalId) { // Prevent starting multiple intervals
+            intervalId = setInterval(interval, 1000, "Hello");
+        }
+    });
+
+    // Stop the interval
+    document.getElementById("stop").addEventListener('click', function() {
+        clearInterval(intervalId);
+        intervalId = null; // Reset the interval ID
+    });
+</script>
+</html>
