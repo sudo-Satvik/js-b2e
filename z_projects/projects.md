@@ -201,3 +201,46 @@ function newGame() {
 }
 
 ```
+
+## Project 5: Random Color Generator
+![Screenshot of Project Five](project-five.png)
+
+### Code below:
+
+```javascript
+const randomColor = () => {
+  const hexData = '0123456789ABCDEF';
+  let color = '#';
+  // Running loop till 3 times : RGB
+  for (let i = 0; i < 3; i++) {
+    color += hexData[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+
+// console.log(randomColor())
+
+let intervalId;
+
+const startChangingColor = () => {
+  // Check if the intervalId is null or not
+  if (!intervalId) intervalId = setInterval(changeBgColor, 1000);
+  function changeBgColor() {
+    document.body.style.backgroundColor = randomColor();
+  }
+};
+
+const stopChangingColor = () => {
+  clearInterval(intervalId);
+  // Free up memory
+  intervalId = null;
+};
+
+document
+  .getElementById('start')
+  .addEventListener('click', startChangingColor, false);
+document
+  .getElementById('stop')
+  .addEventListener('click', stopChangingColor, false);
+
+```
