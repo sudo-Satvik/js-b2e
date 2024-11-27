@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Request</title>
+  </head>
+  <body style="background-color: #222; color: #fff; padding: 20px">
+    <h1>API Request</h1>
+    <ul>
+      <li>
+        Before the fetch, there was XMLHttpRequest was used to request APIs.
+      </li>
+      <li>XMLHttpRequest is a legacy and powerful api request.</li>
+      <li>
+        XMLHttpRequest widely used in AJAX (Asynchronus Javascript and XML)
+        programming.
+      </li>
+    </ul>
+  </body>
+  <script>
+    const reqUrl = "https://api.github.com/users/sudo-Satvik";
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", reqUrl);
+    // console.log(xhr.readyState)      // this doesn't track the readystate
+    // Instead we can use this to track the ready state
+    xhr.onreadystatechange = () => {
+      console.log(xhr.readyState);
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        // Ensure request is successful
+        // Data hamesha string format me fetch hota h
+        // JSON.parse() -> convert String to JSON
+        const data = JSON.parse(xhr.responseText); // Parse the JSON response
+        console.log(data.url); // Access the 'url' property
+      }
+    };
+    xhr.send(); // got actually call
+  </script>
+</html>
